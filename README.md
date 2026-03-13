@@ -17,7 +17,17 @@ To perform 8-bit arithmetic operations such as addition, subtraction, multiplica
 5.	Store the carry (if any) in 41H.
 
 ## Program:
-
+```
+  MOV A,30H;
+  ADD A,31H;
+  MOV 40H,A;
+  JNC NEXT ;
+  MOV 41H,#01H;
+  SJMP END_PROGRAM;
+  NEXT:MOV 41H,#00H;
+  END_PROGRAM:NOP;
+  END
+```
 
 ## Output:
    
